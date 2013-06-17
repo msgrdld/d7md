@@ -1,0 +1,7 @@
+name = Theme Development Practice Theme
+description = A practice theme for Theme Dev Class
+version = 7.x-0.1
+core = 7.x
+
+stylesheets[all][] = css/layout.css
+stylesheets[all][] = css/style.css
