@@ -1,0 +1,26 @@
+<?php
+
+function hello_menu_menu() {
+  $items = array();
+  //the key here is the drupal path to the hello url (don't include "drupal")
+  $items['hello'] = array(
+    //title for the page doesn't need t function since it automatically does it
+    'title' => 'Hello World',
+    //name of the function that generates page content and returns a string
+    'page callback' => 'hello_menu_simple_hello',
+    //array with machine name of drupal permission needed to run this page (use Firebug)
+    'access arguments' => array('access_content'),
+    //default is to place this in the navigation menu but can add this key:
+    'menu_name' => 'main-menu', 
+    'weight'=> 1, 
+    
+  );
+  
+  return $items;
+}
+
+//the page callback function must return a string even if it's blank string
+function hello_menu_simple_hello() {
+  return t('Hello world!!');
+  
+}
